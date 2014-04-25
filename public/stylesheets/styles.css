@@ -1,0 +1,154 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/styles.scss */
+div, p, td, tr, em, strong, li, a {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+/* line 15, ../sass/styles.scss */
+ul {
+  margin-top: 20px;
+}
+/* line 17, ../sass/styles.scss */
+ul li {
+  left: 0px;
+}
+
+/* line 23, ../sass/styles.scss */
+h1, h2, h3, h4 {
+  font-family: "Alegreya", serif;
+  margin-bottom: 20px;
+}
+
+/* line 28, ../sass/styles.scss */
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* line 33, ../sass/styles.scss */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* line 38, ../sass/styles.scss */
+h3 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+/* line 43, ../sass/styles.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 48, ../sass/styles.scss */
+.content {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 54, ../sass/styles.scss */
+button {
+  margin-left: 295px;
+  width: 100px;
+  margin-top: 20px;
+}
+
+/* line 62, ../sass/styles.scss */
+.scores {
+  float: left;
+}
+
+/* line 66, ../sass/styles.scss */
+.scoring {
+  float: right;
+}
+
+/* line 70, ../sass/styles.scss */
+.result {
+  margin-left: 200px;
+}
+
+/* line 72, ../sass/styles.scss */
+.farkled {
+  color: #ff2800;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 78, ../sass/styles.scss */
+.choose-points {
+  margin-top: 0;
+}

@@ -1,0 +1,41 @@
+<h3>Possible scores:</h3>
+<% dice_used = 0 %>
+<% if h.length != 0 %>
+  <% h.map do |key, value| %>
+    <ul class="choose-points">
+    <% if key == 5 || key == 1 %>
+     
+      <% if value == 3 || value == 6 %>
+         <li> You rolled <%= key %> <span class ="dice_used"> <%= value %></span> times for a score of 
+         <%= FarkleRules.points(key,value) %></li>
+      <% elsif value == 4 || value == 5 %>
+       <li> You rolled <%= key %> <span class ="dice_used">3</span> times for a score of 
+         <%= FarkleRules.points(key,3) %></li>
+           <% (value%3).times do %>
+            <li> 
+              You rolled <%= key %> <span class ="dice_used">1</span> time for a score of <%= FarkleRules.points(key,1) %>
+            </li>
+           <% end %>
+        <% else %>
+          <% value.times do %>
+           <li> 
+             You rolled <%= key %> <span class ="dice_used">1</span> times for a score of 
+             <%= FarkleRules.points(key,1) %>
+           </li>
+          <% end %>
+      <% end %>
+     
+    <% else %>
+      <li> You rolled <%= key %> <span class ="dice_used"> <%= FarkleRules.make_three_or_six(value) %></span> times for a score of 
+      <%= FarkleRules.points(key,value) %></li>
+    <% end %>
+      
+
+    </ul>
+  <% end %>
+<% else %>
+  <p class="farkled">You have farkled! Your score for this turn will be reset!</p>
+  <a href="#" class="farkled">End Turn</a>
+<% end %>
+
+

@@ -1,0 +1,80 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+$headlines:'Alegreya', serif;
+$body:'Roboto', sans-serif;
+$farkled:#ff2800 ;
+div, p, td, tr, em, strong, li, a {
+  font-family: $body;
+  line-height:  1.5em;
+  font-size:  16px;
+}
+ul{
+  margin-top:   20px;
+  li {
+    left:0px;  
+  }
+  
+}
+
+h1, h2, h3, h4,{
+ font-family:  $headlines;
+  margin-bottom:  20px;
+}
+
+h1{
+  font-size:  36px;
+  font-weight:  bold;
+}
+
+h2 {
+  font-size:  24px;
+  font-weight:  bold;
+}
+
+h3{
+  font-size:  21px;
+  font-weight:  bold;
+}
+
+.text-center{
+  text-align:   center;
+}
+
+
+.content {
+  width:700px;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+button {
+ margin-left: 295px;
+ width:100px;
+ margin-top:  20px;
+}
+
+//farkle
+
+.scores{
+  float:left
+}
+
+.scoring{
+  float:right;
+}
+
+.result{ margin-left: 200px;}
+
+.farkled{
+  color:$farkled;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.choose-points{
+  margin-top: 0;
+}
