@@ -152,3 +152,10 @@ button {
 .choose-points {
   margin-top: 0;
 }
+/* line 80, ../sass/styles.scss */
+.choose-points li {
+  margin-top: 5px;
+  border: 1px solid green;
+  cursor: pointer;
+  width: 400px;
+}

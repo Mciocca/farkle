@@ -77,4 +77,10 @@ button {
 
 .choose-points{
   margin-top: 0;
+  li{
+    margin-top: 5px;
+    border: 1px solid green;
+    cursor: pointer;
+    width:400px;
+  }
 }

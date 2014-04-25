@@ -42,6 +42,7 @@ class FarkleRules
    end
  end
 
+ #accurately report dice that scored points. example: rolling 4 5s should only report 3 scoring dice
  def self.make_three_or_six(number)
   if number == 6
     return 6
