@@ -132,13 +132,14 @@ var checkForWinner = function() {
     $('.player-turn').text(currentPlayer);
     resetDiceCount();
     removePrevious();
+    turnScore = 0;
     $('#end-turn').remove();
   }
 }
 
 //events need to be initialized for newly loaded DOM elements
  var events = function(){
-  
+  //accept scoring dice
   $(".choice").click(function(){
     updatePlayerScore($(this));
     subtractDice($(this));
