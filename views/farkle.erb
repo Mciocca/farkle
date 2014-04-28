@@ -1,7 +1,21 @@
-<aside class="scores"> 
-  <h3><span>Player 1 name</span><br/> Score : <span class="p1score">0</span></h2>
-  <h3><span>Player 2 name</span><br/> Score : <span class="p2score">0</span></h2>
-</aside>
+<div class="lightbox">
+  <div class="alerts">
+ 
+  </div>
+</div>
+
+<div class="users"> 
+  <h3>
+    <span>Player 1</span><br/> 
+    Score : <span id="p1score" class="score">0</span><br/> 
+    <span class="farkled">Farkled: <span id="f-count-1" class="farkle-count">0</span> </span>
+  </h3>
+  <h3>
+    <span>Player 2</span><br/> 
+    Score : <span id="p2score" class="score">0</span> <br/>
+    <span class="farkled">Farkled: <span id="f-count-2" class="farkle-count">0</span> </span>
+  </h3>
+</div>
 <aside class="scoring"> 
  <ul class="text-center scoring">
     <li>Each 1: 100 points</li>
@@ -14,14 +28,21 @@
     <li>Rolling three 6s: 600 points</li>
   </ul>
 </aside>
+ <div class ="game-table">
+   <div class="info"> 
+     <div>Dice left:<span class="dice-count">6</span></div>
+     <div>Turn score:<span class='turn-score'>0</span></div>
+     <div>Player turn:<span class='player-turn'>1</span></div>
+   </div>
+  <!-- Display rolls --> 
+  <div class="result"></div>
+ </div>
 
-<div class="dice-count">6</div>
-<div class='turn-score'></div>
-<!-- Display rolls -->
-<div class="result"></div>
 <!-- Dispaly possible scores -->
 <div class="possible"></div>
 
-<a href="#" class="roll-dice">Roll the dice</a>
-
+<div class="game-controls">
+  <a href="#" class="roll-dice controls">Roll the dice</a>
+  <a href="#" class="controls" id="end-turn">End Turn</a>
+</div>
 

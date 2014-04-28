@@ -7,6 +7,8 @@
 $headlines:'Alegreya', serif;
 $body:'Roboto', sans-serif;
 $farkled:#ff2800 ;
+$red: #d74b4b;
+$bluish : #475f77;
 div, p, td, tr, em, strong, li, a {
   font-family: $body;
   line-height:  1.5em;
@@ -67,7 +69,13 @@ button {
   float:right;
 }
 
-.result{ margin-left: 200px;}
+.result{ 
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin-top: 10px;
+}
+
 
 .farkled{
   color:$farkled;
@@ -78,9 +86,141 @@ button {
 .choose-points{
   margin-top: 0;
   li{
-    margin-top: 5px;
+    margin-bottom: 10px;
     border: 1px solid green;
     cursor: pointer;
     width:400px;
   }
 }
+
+#end-turn{
+  display: none;
+}
+
+.dice{
+  border-radius: 5px;
+  background-color: #404040;
+  color:white;
+  padding: 20px;
+  font-size: 20px; 
+  width:40px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.users {
+  width:400px; 
+  margin-left: auto;
+  margin-right: auto;
+  h3{
+    display:inline-block;
+    margin-left: 20px;
+  }
+  .farkled{
+    font-style: normal;
+  }
+}
+
+.roll-dice{
+  background-color: $bluish;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  display:inline-block;
+  &:hover{
+    background-color: #5F6C77;
+  }
+  
+}
+
+#end-turn{
+  background-color: $red;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  width:132px;
+  &:hover{
+    background-color:#D77979;
+  }
+}
+
+#reset{
+  background-color: $red;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  width:132px;
+  position:absolute;
+  &:hover{
+    background-color:#D77979;
+  }
+}
+
+.game-table{
+  width:600px;
+  height:200px;
+  border:1px solid #354B5E;
+  background-color: #DCDDD8; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-controls{
+  width:600px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.possible{
+  width:600px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.lightbox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(220, 221, 216, .45);
+  z-index: 150;
+  display: none;
+}
+.alerts{
+  z-index: 100;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  width:300px;
+  text-align: center;
+  border: 2px solid $bluish;
+  background-color: #FFFFFF;
+  h3{
+    margin-bottom: 0;
+    color: $farkled;
+  }
+}
+
+.info{
+     margin-left: auto;
+     margin-right: auto;
+     width:400px;
+    div{
+      display:inline-block;
+      margin-left: 10px;
+  }
+}
+

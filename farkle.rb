@@ -1,6 +1,3 @@
-#redis4you
-require 'redis'
-redis = Redis.new(:url => 'redis://redistogo:9a33157669eb64a75fe81c630cd28c66@barreleye.redistogo.com:10885/')
 require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/reloader' if development?
@@ -19,7 +16,6 @@ end
 
 #send rolled dice to client
 get '/farkle/roll' do
-  content_type :json
   #Farkle.scores(Farkle.roll_dice(6)).to_json
   Dice.roll(params[:dice_count].to_i).to_json
 end
