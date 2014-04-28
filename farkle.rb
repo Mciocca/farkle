@@ -3,7 +3,6 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 require './lib/FarkleRules.rb'
 require './lib/Dice.rb'
-require './lib/Player.rb'
 require 'json'
 
 get '/' do 
