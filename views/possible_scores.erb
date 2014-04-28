@@ -22,7 +22,7 @@
         <% else %>
           <% value.times do %>
            <li class="choice" data-score="<%=FarkleRules.points(key,1)%>" data-dice="1"> 
-             You rolled <%= key %> <span class ="dice_used">1</span> times for a score of 
+             You rolled <%= key %> <span class ="dice_used">1</span> time for a score of 
              <%= FarkleRules.points(key,1) %>
            </li>
           <% end %>

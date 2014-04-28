@@ -180,6 +180,7 @@ button {
   width:600px; 
   margin-left: auto;
   margin-right: auto;
+  margin: auto;
 }
 
 .possible{
@@ -233,7 +234,9 @@ button {
   border-radius: 5px;
   margin-top: 5px;
   width:132px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 18%;
   position: absolute;
+  &:hover{
+    background-color:#ff4c4c;
+  }
 }

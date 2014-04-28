@@ -14,10 +14,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    redis (3.0.7)
     sass (3.2.14)
-    sassy-buttons (0.2.6)
-      compass (>= 0.12.2)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -38,7 +35,5 @@ PLATFORMS
 
 DEPENDENCIES
   compass (= 0.12.3)
-  redis
-  sassy-buttons
   sinatra
   sinatra-reloader
