@@ -224,3 +224,16 @@ button {
   }
 }
 
+.button{
+  background-color: $red;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  width:132px;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+}

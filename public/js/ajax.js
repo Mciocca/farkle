@@ -1,13 +1,15 @@
 $(document).ready(function(){
+
  // Game variables
   var diceCount = 6;
   var playerCount = 2
   var currentPlayer = 1;
   var turnScore = 0;
-
+  alertPlayerTurn();
   // hide lightbox on click
   $('.lightbox').click(function(){
-    $(this).css('display', 'none');
+    //hide lightbox and fix background color incase someone won
+    $(this).css('display', 'none').css('background', 'rgba(220, 221, 216, .45)')
   })
 
   //Ajax stuff
@@ -53,12 +55,18 @@ $(document).ready(function(){
   });
 
  //Not ajax stuff
+
 var updatePlayerScore = function(element){
    var score = element.data('score');
    var pscore = parseInt($("#p"+currentPlayer+"score").text());
    $("#p"+currentPlayer+"score").text(pscore + score);
    turnScore = turnScore + score;
    $('.turn-score').text(turnScore);
+}
+
+var resetDiceCount = function(){
+   diceCount = 6;
+  $('.dice-count').text(diceCount); 
 }
 
 var subtractDice = function(element){
@@ -99,15 +107,15 @@ var alertHotDice = function(){
   $(".lightbox").css('display', 'block');
 }
 
-var alertPlayerTurn = function(){
+//allow function to be called on page load
+function alertPlayerTurn(){
    $(".alerts").html("<h3>Player "+currentPlayer+"'s turn</h3>");
    $(".lightbox").css('display', 'block'); 
 }
 
 var hotDice = function(){
   if(diceCount === 0){
-    diceCount = 6;
-    $('.dice-count').text(diceCount); 
+    resetDiceCount();
     alertHotDice();
   }
 }
@@ -115,12 +123,14 @@ var hotDice = function(){
 var checkForWinner = function() {
   console.log('no winner');
   if(parseInt($("#p"+currentPlayer+"score").text()) >= 10000){
-    $(".lightbox").css('display', 'block');
+    $(".lightbox").css('display', 'block').css('background', '#D73832');
     $(".alerts").html("<h3>Player "+currentPlayer+" Wins!</h3>");
     $(".score").text(0);
     $(".farkle-count").text(0);
     currentPlayer = 1;
-    diceCount = 6;
+    $('.player-turn').text(currentPlayer);
+    resetDiceCount();
+    removePrevious();
   }
 }
 
@@ -137,14 +147,13 @@ var checkForWinner = function() {
   });
 
  $("#reset").click(function(){
+   increaseFarkleCount();
    var pscore = parseInt($("#p"+currentPlayer+"score").text());
    $("#p"+currentPlayer+"score").text( pscore - turnScore);
-   diceCount = 6;
-   $('.dice-count').text(diceCount); 
+   resetDiceCount(); 
    changePlayerTurn();
    $('.roll-dice').show();
    $(this).parent($('.farkled')).remove();
-   increaseFarkleCount();
  });
  //end events
 }
@@ -152,8 +161,7 @@ var checkForWinner = function() {
  $("#end-turn").click(function(){
    changePlayerTurn();
    $(this).hide();
-   diceCount = 6;
-   $('.dice-count').text(diceCount); 
+   resetDiceCount(); 
  });
 
 //end

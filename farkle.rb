@@ -25,7 +25,3 @@ post '/farkle/possible' do
   erb :possible_scores, :layout => false, :locals => {:h => h}
 end
 
-get '/test' do
-  content_type :json
-   FarkleRules.scoring_rolls(Dice.roll(6)).to_json
-end
