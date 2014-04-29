@@ -8,14 +8,13 @@ $(document).ready(function(){
   alertPlayerTurn();
   // hide lightbox on click
   $('.lightbox').click(function(){
-    //hide lightbox and fix background color incase someone won
+    //if lightbox is called after a win, set background to original color
     $(this).css('display', 'none').css('background', 'rgba(220, 221, 216, .45)')
   })
 
   //Ajax stuff
   //get possible scores to render
   var getPossible = function(roll){
-    console.log("Data inputed to function " + roll);
     $.ajax({
       method: 'POST',
       data: {player_roll: roll},
@@ -45,9 +44,10 @@ $(document).ready(function(){
       url: "/farkle/roll",
       success: function( data ){
         $('.result').text('');
-        console.log(data);
-        showRolls(data);
-        getPossible(data);
+        $('.dice').remove();
+        // using set timeout makes it clear that new dice have been rolled
+        setTimeout(function(){showRolls(data)},300);
+        setTimeout(function(){getPossible(data)},300);
         $this.hide();
         $("#end-turn").hide();
       }
@@ -75,6 +75,7 @@ var subtractDice = function(element){
   $('.dice-count').text(diceCount);
   $('.roll-dice').show(); 
 }
+
  var removePrevious = function(){
   $('.choose-points').remove();
   $('.dice').remove();
@@ -98,8 +99,7 @@ var changePlayerTurn = function(){
 
 var increaseFarkleCount = function(){
  var fCount = parseInt($('#f-count-'+currentPlayer).text());
- fCount = fCount + 1;
- $('#f-count-'+currentPlayer).text(fCount);
+ $('#f-count-'+currentPlayer).text(fCount + 1);
 }
 
 var alertHotDice = function(){
