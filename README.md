@@ -12,4 +12,4 @@ First, make sure you have Ruby installed. I recommend grabbing Ruby and everythi
 Next clone this repo, `$ cd` to it and run `$ bundle install`. From the main folder of the 
 game, run `ruby farkle.rb` and navigate your browser to localhost:4567. Now grab a friend and play farkle!
 
-The easier way woukd be to play it over on [Heroku](http://radiant-taiga-1258.herokuapp.com/)
+If your feeling lazy, just play it over on [Heroku](http://radiant-taiga-1258.herokuapp.com/).
