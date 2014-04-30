@@ -5,6 +5,7 @@ $(document).ready(function(){
   var playerCount = 2
   var currentPlayer = 1;
   var turnScore = 0;
+  //alert player turn on window load
   alertPlayerTurn();
   // hide lightbox on click
   $('.lightbox').click(function(){
@@ -46,8 +47,8 @@ $(document).ready(function(){
         $('.result').text('');
         $('.dice').remove();
         // using set timeout makes it clear that new dice have been rolled
-        setTimeout(function(){showRolls(data)},300);
-        setTimeout(function(){getPossible(data)},300);
+        setTimeout(function(){showRolls(data);},300);
+        setTimeout(function(){getPossible(data);},300);
         $this.hide();
         $("#end-turn").hide();
       }
@@ -133,7 +134,7 @@ var checkForWinner = function() {
     resetDiceCount();
     removePrevious();
     turnScore = 0;
-    $('#end-turn').remove();
+    $('#end-turn').hide();
   }
 }
 

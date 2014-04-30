@@ -1,5 +1,4 @@
 class FarkleRules
-  attr_reader :single, :triples
 
   @single = {
     1 => 100,
