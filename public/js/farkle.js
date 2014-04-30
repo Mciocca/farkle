@@ -44,6 +44,7 @@ $(document).ready(function(){
       data: {dice_count: diceCount},
       url: "/farkle/roll",
       success: function( data ){
+        console.log(data);
         $('.result').text('');
         $('.dice').remove();
         // using set timeout makes it clear that new dice have been rolled

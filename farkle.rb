@@ -15,7 +15,7 @@ end
 
 #send rolled dice to client
 get '/farkle/roll' do
-  #Farkle.scores(Farkle.roll_dice(6)).to_json
+  content_type :json
   Dice.roll(params[:dice_count].to_i).to_json
 end
 
