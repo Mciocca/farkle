@@ -13,3 +13,8 @@ Next clone this repo, `$ cd` to it and run `$ bundle install`. From the main fol
 game, run `ruby farkle.rb` and navigate your browser to localhost:4567. Now grab a friend and play farkle!
 
 If your feeling lazy, just play it over on [Heroku](http://radiant-taiga-1258.herokuapp.com/).
+
+Playing the game
+----------------
+
+Roll the dice, and you will be presented with a list of scoring dice that you can choose to keep. You must keep at least 1 possible scoring combination each roll. You can then choose to roll the remaining dice or end your turn. If you do not roll any scoring dice, you Farkle, and lose all of the points you have accumulated that turn and the other player gets to play. If all 6 dice score points, you have "hot dice" and get to roll all 6 again. First person to 10,000 points wins!
