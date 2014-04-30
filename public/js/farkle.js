@@ -88,6 +88,10 @@ var subtractDice = function(element){
   } 
  }
 
+ var resetBestTurn = function(){
+  $(".best").text("0");
+ }
+
 var changePlayerTurn = function(){
   turnScore = 0;
   $('.turn-score').text(0);
@@ -140,6 +144,7 @@ var checkForWinner = function() {
     resetDiceCount();
     removePrevious();
     turnScore = 0;
+    resetBestTurn();
     $('#end-turn').hide();
   }
 }
