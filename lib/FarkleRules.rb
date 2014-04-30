@@ -14,6 +14,7 @@ class FarkleRules
     6 => 600
   }
 
+  #take rolls and filter out scoring combinations
   def self.scoring_rolls(rolls)
     possible = {} 
       rolls.map do |key, value|
@@ -37,7 +38,7 @@ class FarkleRules
      return @single[key] * value
    else
      value = value / 3
-     return @triples[key]
+     return @triples[key] * value
    end
  end
 
