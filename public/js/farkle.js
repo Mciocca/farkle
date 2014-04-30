@@ -82,6 +82,12 @@ var subtractDice = function(element){
   $('.dice').remove();
  }
 
+ var updateBestTurn = function(){
+  if(turnScore >= parseInt( $('#best-'+currentPlayer).text() ) ){
+    $('#best-'+currentPlayer).text(turnScore);
+  } 
+ }
+
 var changePlayerTurn = function(){
   turnScore = 0;
   $('.turn-score').text(0);
@@ -163,6 +169,7 @@ var checkForWinner = function() {
 }
  
  $("#end-turn").click(function(){
+   updateBestTurn();
    changePlayerTurn();
    $(this).hide();
    resetDiceCount(); 
