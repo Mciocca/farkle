@@ -3,23 +3,25 @@
   <% h.map do |key, value| %>
     <ul class="choose-points">
     <% if key == 5 || key == 1 %>
-     
+   
       <% if value == 3 || value == 6 %>
+      <!-- Values need no special formatting, User rolled triples -->
          <li class="choice" data-score="<%=FarkleRules.points(key,value)%>" data-dice="<%= value %>" > 
            You rolled <%= key %> <span class ="dice_used"> <%= value %></span> times for a score of 
            <%= FarkleRules.points(key,value) %>
          </li>
       <% elsif value == 4 || value == 5 %>
+    <!-- rolled more than 3 of the same dice. Give score for 3, plus option to choose each of the other possible scoring dice -->
        <li class="choice" data-score="<%=FarkleRules.points(key,3)%>" data-dice="3"> 
          You rolled <%= key %> <span class ="dice_used">3</span> times for a score of <%= FarkleRules.points(key,3) %>
        </li>
-     <!-- rolled more than 3 of the same dice. Give score for 3, plus option to choose each of the other possible scoring dice -->
            <% (value%3).times do %>
             <li class="choice" data-score="<%=FarkleRules.points(key,1)%>" data-dice="1"> 
               You rolled <%= key %> <span class ="dice_used">1</span> time for a score of <%= FarkleRules.points(key,1) %>
             </li>
            <% end %>
         <% else %>
+        <!-- Let user choose to use only one scoring dice when the user did not roll triples but rolled more than one 1 or -->
           <% value.times do %>
            <li class="choice" data-score="<%=FarkleRules.points(key,1)%>" data-dice="1"> 
              You rolled <%= key %> <span class ="dice_used">1</span> time for a score of 
@@ -30,6 +32,7 @@
      
     <% else %>
     <div>
+    <!-- User rolled triples of numbers other than 1 or 5 -->
       <li class="choice" data-score="<%=FarkleRules.points(key,value)%>" data-dice="<%= FarkleRules.make_three_or_six(value) %>">
          You rolled <%= key %> <span class ="dice_used"><%= FarkleRules.make_three_or_six(value) %></span> times for a score of 
          <%= FarkleRules.points(key,value) %>
