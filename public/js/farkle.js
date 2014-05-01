@@ -102,10 +102,10 @@ var changePlayerTurn = function(){
     removePrevious();
     alertPlayerTurn();
   }else{
-   currentPlayer = 1;
-   $(".player-turn").text(currentPlayer);
-   removePrevious();
-   alertPlayerTurn();
+    currentPlayer = 1;
+    $(".player-turn").text(currentPlayer);
+    removePrevious();
+    alertPlayerTurn();
   }
 }
 
@@ -129,8 +129,8 @@ var hotDice = function(){
   if(diceCount === 0){
     resetDiceCount();
     alertHotDice();
-    var count = parseInt($("#hot-"+currentPlayer).text());
-    $("#hot-"+currentPlayer).text(count + 1);
+    var hotCount = parseInt($("#hot-"+currentPlayer).text());
+    $("#hot-"+currentPlayer).text(hotCount + 1);
   }
 }
 
