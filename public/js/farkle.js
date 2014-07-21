@@ -2,7 +2,7 @@ $(document).ready(function(){
 
  // Game variables
   var diceCount = 6;
-  var playerCount = 2
+  var playerCount = 2;
   var currentPlayer = 1;
   var turnScore = 0;
   //alert player turn on window load
