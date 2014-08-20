@@ -1,17 +1,11 @@
 $(document).ready(function(){
 
  // Game variables
-<<<<<<< HEAD
   var diceCount = 6,
       playerCount = 2,
       currentPlayer = 1,
       turnScore = 0;
-=======
-  var diceCount = 6;
-  var playerCount = 2;
-  var currentPlayer = 1;
-  var turnScore = 0;
->>>>>>> a9810962b1e5b602cd7349b6940feb3669cd87aa
+
   //alert player turn on window load
   alertPlayerTurn();
   // hide lightbox on click
@@ -38,7 +32,7 @@ $(document).ready(function(){
  //show rolled dice
   var showRolls = function(rolls){
     for(key in rolls){
-      for(var i = 0; i< rolls[key]; i++){
+      for(var i = 0; i < rolls[key]; i++){
         $(".result").append('<p class="dice">'+ key +"</p>");
       }
     }
@@ -126,7 +120,6 @@ var alertHotDice = function(){
   $(".lightbox").css('display', 'block');
 }
 
-//allow function to be called on page load
 function alertPlayerTurn(){
    $(".alerts").html("<h3>Player "+currentPlayer+"'s turn</h3>");
    $(".lightbox").css('display', 'block');
