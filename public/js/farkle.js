@@ -1,10 +1,17 @@
 $(document).ready(function(){
 
  // Game variables
+<<<<<<< HEAD
   var diceCount = 6,
       playerCount = 2,
       currentPlayer = 1,
       turnScore = 0;
+=======
+  var diceCount = 6;
+  var playerCount = 2;
+  var currentPlayer = 1;
+  var turnScore = 0;
+>>>>>>> a9810962b1e5b602cd7349b6940feb3669cd87aa
   //alert player turn on window load
   alertPlayerTurn();
   // hide lightbox on click

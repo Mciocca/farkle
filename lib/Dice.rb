@@ -7,11 +7,11 @@ class Dice
       3 => 0,
       4 => 0,
       5 => 0,
-      6 => 0,  
-    } 
-    dice_count.times do 
+      6 => 0,
+    }
+    dice_count.times do
       rand = rand((1..6))
-      rolls[rand] += 1 
+      rolls[rand] += 1
     end
   return rolls
  end
