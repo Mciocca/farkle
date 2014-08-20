@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
  // Game variables
-  var diceCount = 6;
-  var playerCount = 2
-  var currentPlayer = 1;
-  var turnScore = 0;
+  var diceCount = 6,
+      playerCount = 2,
+      currentPlayer = 1,
+      turnScore = 0;
   //alert player turn on window load
   alertPlayerTurn();
   // hide lightbox on click
@@ -38,13 +38,13 @@ $(document).ready(function(){
   }
   //roll the dice
   $('.roll-dice').click(function(){
-    $this = $(this); 
+    $this = $(this);
     $.ajax({
       dataType: "json",
       data: {dice_count: diceCount},
       url: "/farkle/roll",
       success: function( data ){
-        console.log(data);
+        //console.log(data);
         $('.result').text('');
         $('.dice').remove();
         // using set timeout makes it clear that new dice have been rolled
@@ -68,14 +68,14 @@ var updatePlayerScore = function(element){
 
 var resetDiceCount = function(){
    diceCount = 6;
-  $('.dice-count').text(diceCount); 
+  $('.dice-count').text(diceCount);
 }
 
 var subtractDice = function(element){
   var count = element.data('dice');
   diceCount = diceCount - count;
   $('.dice-count').text(diceCount);
-  $('.roll-dice').show(); 
+  $('.roll-dice').show();
 }
 
  var removePrevious = function(){
@@ -86,7 +86,7 @@ var subtractDice = function(element){
  var updateBestTurn = function(){
   if(turnScore >= parseInt( $('#best-'+currentPlayer).text() ) ){
     $('#best-'+currentPlayer).text(turnScore);
-  } 
+  }
  }
 
  var resetBestTurn = function(){
@@ -122,7 +122,7 @@ var alertHotDice = function(){
 //allow function to be called on page load
 function alertPlayerTurn(){
    $(".alerts").html("<h3>Player "+currentPlayer+"'s turn</h3>");
-   $(".lightbox").css('display', 'block'); 
+   $(".lightbox").css('display', 'block');
 }
 
 var hotDice = function(){
@@ -166,19 +166,19 @@ var checkForWinner = function() {
    increaseFarkleCount();
    var pscore = parseInt($("#p"+currentPlayer+"score").text());
    $("#p"+currentPlayer+"score").text( pscore - turnScore);
-   resetDiceCount(); 
+   resetDiceCount();
    changePlayerTurn();
    $('.roll-dice').show();
    $(this).parent($('.farkled')).remove();
  });
  //end events
 }
- 
+
  $("#end-turn").click(function(){
    updateBestTurn();
    changePlayerTurn();
    $(this).hide();
-   resetDiceCount(); 
+   resetDiceCount();
  });
 
 //end
